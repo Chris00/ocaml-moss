@@ -1,0 +1,13 @@
+B ../_build/default/src
+B ../_build/default/tests
+FLG -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs
+PKG bigarray
+PKG bytes
+PKG re
+PKG re.posix
+PKG sexplib
+PKG sexplib.0
+PKG stringext
+PKG unix
+PKG uri
+S ../src
