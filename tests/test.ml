@@ -21,7 +21,17 @@
 
 open Printf
 
+let file1 =
+  Moss.File.of_string ~name:"dir1/test1.py"
+    "for i in range(n):\n  \
+       print(i)"
+
+let file2 =
+  Moss.File.of_string ~name:"dir2/test2.py"
+    "for index in range(n_objects):\n  \
+       print index"
+
 let () =
   printf "Default USERID: %s\n%!" (Moss.get_userid());
-  let r = Moss.(submit Ascii ["src/jbuild"; "tests/jbuild"]) in
+  let r = Moss.(submit Python [file1; file2]) in
   printf "▸%s◂\n" (Uri.to_string r)
