@@ -28,3 +28,4 @@ See the [interface of Moss](src/moss.mli).
 [MOSS]: http://theory.stanford.edu/~aiken/moss/
 [submission]: http://moss.stanford.edu/general/scripts/mossnet
 [OPAM]: https://opam.ocaml.org/
+[jbuilder]: https://github.com/janestreet/jbuilder
