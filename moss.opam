@@ -6,3 +6,10 @@ build: [
   [ "jbuilder" "subst" ] {pinned}
   [ "jbuilder" "build" "-p" name "-j" jobs ]
 ]
+build-test: [["jbuilder" "runtest" "-p" name "-j" jobs]]
+depends: [
+  "jbuilder" {build}
+  "base-unix"
+  "base-bytes"
+  "uri"
+]
