@@ -10,11 +10,11 @@ own instance — so you need to [obtain an account][MOSS] first.
 Install
 -------
 
-The easiest is to use [OPAM][]:
+The easiest way to install the library is to use [OPAM][]:
 
     opam install moss
 
-To compile by hand, install [jbuilder][] and do `jbuilder build @install`.
+To compile by hand, install [jbuilder][] and do `jbuilder build`.
 
 
 Documentation
