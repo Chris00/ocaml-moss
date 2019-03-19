@@ -3,7 +3,7 @@ PKGVERSION = $(shell git describe --always --dirty)
 TESTS=$(wildcard tests/*.ml)
 
 build:
-	jbuilder build @install $(TESTS:.ml=.exe) --dev
+	dune build @install $(TESTS:.ml=.exe)
 
 tests: build
 	for t in $(TESTS:.ml=.exe); do \
@@ -12,13 +12,11 @@ tests: build
 	done
 
 install uninstall:
-	jbuilder $@
+	dune $@
 
 doc:
-	sed -e 's/%%VERSION%%/$(PKGVERSION)/' src/moss.mli \
-	  > _build/default/src/moss.mli
-	jbuilder build @doc
-	echo '.def { background: #f0f0f0; }' >> _build/default/_doc/odoc.css
-
+	dune build @doc
+	sed -e 's/%%VERSION%%/$(PKGVERSION)/' --in-place \
+	  _build/default/_doc/_html/moss/Moss/index.html
 
 .PHONY: build tests install uninstall doc

@@ -14,7 +14,7 @@ The easiest way to install the library is to use [OPAM][]:
 
     opam install moss
 
-To compile by hand, install [jbuilder][] and do `jbuilder build`.
+To compile by hand, install [dune][] and do `dune build @install`.
 
 
 Documentation
@@ -28,4 +28,4 @@ See the [interface of Moss](src/moss.mli).
 [MOSS]: http://theory.stanford.edu/~aiken/moss/
 [submission]: http://moss.stanford.edu/general/scripts/mossnet
 [OPAM]: https://opam.ocaml.org/
-[jbuilder]: https://github.com/janestreet/jbuilder
+[dune]: https://github.com/ocaml/dune

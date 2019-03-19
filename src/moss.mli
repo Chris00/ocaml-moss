@@ -77,8 +77,8 @@ module File : sig
     object
       method input : Bytes.t -> int -> int -> int
       (** [input buf ofs len] reads up to [len] octets from the
-         channel and puts them in the substring [buf.[ofs
-         .. ofs+len-1]].  Returns the number of octets actually read
+         channel and puts them in the substring [buf.[ofs .. ofs+len-1]].
+         Returns the number of octets actually read
          (and stored).  When the channel is non-blocking, and there
          are currently no bytes to read, the number 0 will be
          returned.
